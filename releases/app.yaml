@@ -2,12 +2,12 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: azure-arc-sample
-  namespace: arc-k8s-demo
+  namespace: arc-eks-demo
 spec:
-  releaseName: arc-k8s-demo
+  releaseName: arc-eks-demo
   chart:
-    git: https://github.com/Azure/arc-helm-demo
+    git: https://github.com/jf781/arc-helm-demo
     ref: master
     path: charts/azure-arc-sample
   values:
-    serviceName: arc-k8s-demo
+    serviceName: arc-eks-demo
